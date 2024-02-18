@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Website Icon" type="png" href="python.png">
+  <title>Upload Video</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    label:hover {
+      background-color: #218f54;
+    }
+
+    label::after {
+      content: 'Choose File';
+    }
+
+    input[type="submit"] {
+      background-color: #27ae60;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218f54;
+    }
+
+    p {
+      color: #555;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Upload Video</h1>
+  </header>
+
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="fileInput">
+    <label for="fileInput"></label>
+    <input type="submit" value="Upload">
+  </form>
+<p>Hello Welcome to my Product. Hope you like it❤️</p>
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+
+</body>
+</html>
